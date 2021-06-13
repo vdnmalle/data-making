@@ -186,6 +186,8 @@ withoutuserdetail
   )
 
 
+  val with_unix_timestamp = with_userdetail_final.withColumn("tran_date",
+    from_unixtime(col("registered"), "yyyy-MM-dd HH:mm:ss"))
 
 
 
