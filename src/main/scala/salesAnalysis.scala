@@ -192,6 +192,7 @@ withoutuserdetail
 
 
 
+
   def main(args: Array[String]): Unit = {
 
     println("kafka reading is completed")
