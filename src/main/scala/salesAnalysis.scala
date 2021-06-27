@@ -185,10 +185,27 @@ withoutuserdetail
     round(rand() * col("tran_amount"), 2).alias("tran_amount")
   )
 
+<<<<<<< HEAD
 
   val with_unix_timestamp = with_userdetail_final.withColumn("tran_date",
     from_unixtime(col("registered"), "yyyy-MM-dd HH:mm:ss"))
 
+=======
+  val transaction_detail_df_8 = with_unix_timestamp.select(
+    col("user_id"),
+    col("first_name"),
+    col("last_name"),
+    col("gender"),
+    col("city"),
+    col("state"),
+    col("zip"),
+    col("email"),
+    col("nationality"),
+    col("tran_card_type"),
+    col("tran_date"),
+    col("product_id"),
+    col("tran_amount"))
+>>>>>>> 1a101d8 (feat/WAL-3)
 
 
 
